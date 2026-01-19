@@ -9,13 +9,12 @@ export class AwsPipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-
     const pipeline = new CodePipeline(this, 'demopipeline2', {
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.connection(
           'PIYUSH-69/aws-cicd',
           'main',{
-            connectionArn: 'arn:aws:codeconnections:ap-south-1:536697268919:connection/09eff953-3791-4384-a296-80cff544fcd3'
+            connectionArn: 'arn:aws:codeconnections:ap-south-1:706877673330:connection/e3a0b34f-39dc-4a14-9c9a-757a643f3a3b'
           }  
         ),
         
